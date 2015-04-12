@@ -1,0 +1,6 @@
+// Emerald_Accent.json
+{
+	"ThemeName": "Emerald",
+	"ThemeSource": "pack://application:,,,/MahApps.Metro;component/Styles/Accents/Emerald.xaml",
+	"HexColourCode": "#CC008A00"
+}

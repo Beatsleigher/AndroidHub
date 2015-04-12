@@ -1,0 +1,6 @@
+// Pink_Accent.json
+{
+	"ThemeName": "Pink",
+	"ThemeSource": "pack://application:,,,/MahApps.Metro;component/Styles/Accents/Pink.xaml",
+	"HexColourCode": "#CCF472D0"
+}

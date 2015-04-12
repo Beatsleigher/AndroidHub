@@ -1,0 +1,6 @@
+// Sienna_Accent.json
+{
+	"ThemeName": "Sienna",
+	"ThemeSource": "pack://application:,,,/MahApps.Metro;component/Styles/Accents/Sienna.xaml",
+	"HexColourCode": "#CCA0522D"
+}

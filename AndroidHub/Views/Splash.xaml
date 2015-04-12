@@ -1,0 +1,21 @@
+﻿<controls:MetroWindow x:Class="AndroidHub.Views.Splash"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:img="clr-namespace:AndroidHub"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Height="300" Width="600" 
+        EnableDWMDropShadow="True" ShowInTaskbar="False" ResizeMode="NoResize" IsCloseButtonEnabled="False" 
+        IsMaxRestoreButtonEnabled="False" IsMinButtonEnabled="False" IsWindowDraggable="False" WindowStartupLocation="CenterScreen" >
+    
+    <Grid>
+        <StackPanel VerticalAlignment="Top" HorizontalAlignment="Stretch">
+            <Image x:Name="iconHolder" Source="{Binding HubIcon, UpdateSourceTrigger=Default}" Stretch="Fill" Width="256" Height="256" />
+        </StackPanel>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0, -50, 0, 0">
+            <TextBlock Text="AndroidHub" FontFamily="Hackney Block Outline" VerticalAlignment="Center" Foreground="White" FontWeight="Bold" TextDecorations="Underline" FontSize="36" />
+        </StackPanel>
+        <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Stretch">
+            <TextBlock x:Name="loadProgressTxt" Text="{Binding ReadableProgress, UpdateSourceTrigger=PropertyChanged}" Foreground="White" FontWeight="Bold" />
+            <ProgressBar x:Name="loadProgress" Value="{Binding StartupProgress, UpdateSourceTrigger=PropertyChanged}" />
+        </StackPanel>
+    </Grid>
+</controls:MetroWindow>

@@ -1,0 +1,6 @@
+// Taupe_Accent.json
+{
+	"ThemeName": "Taupe",
+	"ThemeSource": "pack://application:,,,/MahApps.Metro;component/Styles/Accents/Taupe.xaml",
+	"HexColourCode": "#CC87794E"
+}

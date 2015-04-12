@@ -1,0 +1,6 @@
+// Amber_Accent.json
+{
+	"ThemeName": "Amber",
+	"ThemeSource": "pack://application:,,,/MahApps.Metro;component/Styles/Accents/Amber.xaml",
+	"HexColourCode": "#CCF0A30A"
+}

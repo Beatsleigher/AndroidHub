@@ -1,0 +1,6 @@
+// Cobalt_Accent.json
+{
+	"ThemeName": "Cobalt",
+	"ThemeSource": "pack://application:,,,/MahApps.Metro;component/Styles/Accents/Cobalt.xaml",
+	"HexColourCode": "#CC0050EF"
+}

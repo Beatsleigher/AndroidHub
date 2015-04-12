@@ -1,0 +1,6 @@
+// Mauve_Accent.json
+{
+	"ThemeName": "Mauve",
+	"ThemeSource": "pack://application:,,,/MahApps.Metro;component/Styles/Accents/Mauve.xaml",
+	"HexColourCode": "#CC76608A"
+}

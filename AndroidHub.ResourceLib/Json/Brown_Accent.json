@@ -1,0 +1,6 @@
+// Brown_Accent.json
+{
+	"ThemeName": "Brown",
+	"ThemeSource": "pack://application:,,,/MahApps.Metro;component/Styles/Accents/Brown.xaml",
+	"HexColourCode": "#CC825A2C"
+}

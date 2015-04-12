@@ -1,0 +1,6 @@
+// BaseDark_Theme.json
+{
+	"ThemeName": "BaseDark",
+	"ThemeSource": "pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseDark.xaml",
+	"HexColourCode": "#252525"
+}

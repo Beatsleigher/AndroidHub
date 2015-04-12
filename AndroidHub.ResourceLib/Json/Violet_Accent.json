@@ -1,0 +1,6 @@
+// Violet_Accent.json
+{
+	"ThemeName": "Violet",
+	"ThemeSource": "pack://application:,,,/MahApps.Metro;component/Styles/Accents/Violet.xaml",
+	"HexColourCode": "#CCAA00FF"
+}

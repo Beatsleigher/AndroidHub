@@ -1,0 +1,6 @@
+// Magenta_Accent.json
+{
+	"ThemeName": "Magenta",
+	"ThemeSource": "pack://application:,,,/MahApps.Metro;component/Styles/Accents/Magenta.xaml",
+	"HexColourCode": "#CCD80073"
+}

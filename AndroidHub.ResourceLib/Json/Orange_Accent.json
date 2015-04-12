@@ -1,0 +1,6 @@
+// Orange_Accent.json
+{
+	"ThemeName": "Orange",
+	"ThemeSource": "pack://application:,,,/MahApps.Metro;component/Styles/Accents/Orange.xaml",
+	"HexColourCode": "#CCFA6800"
+}

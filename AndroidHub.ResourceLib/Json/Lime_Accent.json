@@ -1,0 +1,6 @@
+// Lime_Accent.json
+{
+	"ThemeName": "Lime",
+	"ThemeSource": "pack://application:,,,/MahApps.Metro;component/Styles/Accents/Lime.xaml",
+	"HexColourCode": "#CCA4C400"
+}

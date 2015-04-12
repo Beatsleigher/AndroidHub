@@ -1,0 +1,6 @@
+// Red_Accent.json
+{
+	"ThemeName": "Red",
+	"ThemeSource": "pack://application:,,,/MahApps.Metro;component/Styles/Accents/Red.xaml",
+	"HexColourCode": "#CCE51400"
+}

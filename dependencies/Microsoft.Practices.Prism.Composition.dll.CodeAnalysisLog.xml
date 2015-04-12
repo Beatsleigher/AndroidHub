@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\program files (x86)\microsoft visual studio 12.0\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="12.0">
+ <Targets>
+  <Target Name="C:\Users\Beatsleigher\Documents\Prism_Lib\Build_Release\Microsoft.Practices.Prism.Composition.dll">
+   <Modules>
+    <Module Name="microsoft.practices.prism.composition.dll">
+     <Namespaces>
+      <Namespace Name="Microsoft.Practices.Prism.Events">
+       <Types>
+        <Type Name="DefaultDispatcher" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="ProvideObsoleteAttributeMessage" Category="Microsoft.Design" CheckId="CA1041" Status="Active" Created="2015-03-22 21:32:00Z" FixCategory="NonBreaking">
+           <Issue Certainty="95" Level="Error">Provide a message for the ObsoleteAttribute that marks 'DefaultDispatcher'.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="DispatcherEventSubscription`1" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="ProvideObsoleteAttributeMessage" Category="Microsoft.Design" CheckId="CA1041" Status="Active" Created="2015-03-22 21:32:00Z" FixCategory="NonBreaking">
+           <Issue Certainty="95" Level="Error">Provide a message for the ObsoleteAttribute that marks 'DispatcherEventSubscription&lt;TPayload&gt;'.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="IDispatcherFacade" Kind="Interface" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="ProvideObsoleteAttributeMessage" Category="Microsoft.Design" CheckId="CA1041" Status="Active" Created="2015-03-22 21:32:00Z" FixCategory="NonBreaking">
+           <Issue Certainty="95" Level="Error">Provide a message for the ObsoleteAttribute that marks 'IDispatcherFacade'.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="Microsoft.Practices.Prism.Regions">
+       <Types>
+        <Type Name="NavigationAsyncExtensions" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#RequestNavigate(Microsoft.Practices.Prism.Regions.INavigateAsync,System.String,Microsoft.Practices.Prism.Regions.NavigationParameters)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="StringUriOverloadsCallSystemUriOverloads" Category="Microsoft.Design" CheckId="CA1057" Status="Active" Created="2015-03-22 21:32:00Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Error" Path="c:\Users\Beatsleigher\Documents\Prism_Lib\PrismLibrary\Desktop\Prism\Regions" File="NavigationAsyncExtensions.cs" Line="88">Refactor 'NavigationAsyncExtensions.RequestNavigate(this INavigateAsync, string, NavigationParameters)' so that it builds a System.Uri object from 'target', and then calls 'NavigationAsyncExtensions.RequestNavigate(this INavigateAsync, Uri, NavigationParameters)'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="NavigationParameters" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="IdentifiersShouldHaveCorrectSuffix" Category="Microsoft.Naming" CheckId="CA1710" Status="Active" Created="2015-03-22 21:32:00Z" FixCategory="Breaking">
+           <Issue Certainty="95" Level="Error">Rename 'NavigationParameters' to end in 'Collection'.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="RegionNavigationService" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#RequestNavigate(System.Uri,System.Action`1&lt;Microsoft.Practices.Prism.Regions.NavigationResult&gt;,Microsoft.Practices.Prism.Regions.NavigationParameters)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2015-03-22 21:32:00Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="c:\Users\Beatsleigher\Documents\Prism_Lib\PrismLibrary\Desktop\Prism\Regions" File="RegionNavigationService.cs" Line="134">Modify 'RegionNavigationService.RequestNavigate(Uri, Action&lt;NavigationResult&gt;, NavigationParameters)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031">
+   <Name>Do not catch general exception types</Name>
+   <Description>You should not catch Exception or SystemException. Catching generic exception types can hide run-time problems from the library user, and can complicate debugging. You should catch only those exceptions that you can handle gracefully.</Description>
+   <Resolution Name="Default">Modify {0} to catch a more specific exception than {1} or rethrow the exception.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182137.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError</MessageLevel>
+   <File Name="designrules.dll" Version="12.0.0.0" />
+  </Rule>
+  <Rule TypeName="IdentifiersShouldHaveCorrectSuffix" Category="Microsoft.Naming" CheckId="CA1710">
+   <Name>Identifiers should have correct suffix</Name>
+   <Description>Types that extend certain base types have specified name suffixes. Types that extend Attribute, for example, should be suffixed in 'Attribute', as in ObsoleteAttribute. This rules checks types that extend several base types, including Attribute, Exception, EventArgs, IMembershipPermission, Stream, and others.</Description>
+   <Resolution Name="Default">Rename {0} to end in '{1}'.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182244.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="namingrules.dll" Version="12.0.0.0" />
+  </Rule>
+  <Rule TypeName="ProvideObsoleteAttributeMessage" Category="Microsoft.Design" CheckId="CA1041">
+   <Name>Provide ObsoleteAttribute message</Name>
+   <Description>The ObsoleteAttribute.Message property provides the text message displayed when an obsolete type or member is compiled. This message should provide information on the replacement for the obsolete element.</Description>
+   <Resolution Name="Default">Provide a message for the ObsoleteAttribute that marks {0}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182166.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="designrules.dll" Version="12.0.0.0" />
+  </Rule>
+  <Rule TypeName="StringUriOverloadsCallSystemUriOverloads" Category="Microsoft.Design" CheckId="CA1057">
+   <Name>String URI overloads call System.Uri overloads</Name>
+   <Description>If a method overloads another method by replacing a System.Uri parameter with a string, then the string overload should simply build a Uri object from the string, and pass the result to the string overload.</Description>
+   <Resolution Name="Default">Refactor {0} so that it builds a System.Uri object from {1}, and then calls {2}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182170.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Error</MessageLevel>
+   <File Name="designrules.dll" Version="12.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">Category</String>
+  <String Key="Certainty">Certainty</String>
+  <String Key="CollapseAll">Collapse All</String>
+  <String Key="CheckId">Check Id</String>
+  <String Key="Error">Error</String>
+  <String Key="Errors">error(s)</String>
+  <String Key="ExpandAll">Expand All</String>
+  <String Key="Help">Help</String>
+  <String Key="Line">Line</String>
+  <String Key="Messages">message(s)</String>
+  <String Key="LocationNotStoredInPdb">[Location not stored in Pdb]</String>
+  <String Key="Project">Project</String>
+  <String Key="Resolution">Resolution</String>
+  <String Key="Rule">Rule</String>
+  <String Key="RuleFile">Rule File</String>
+  <String Key="RuleDescription">Rule Description</String>
+  <String Key="Source">Source</String>
+  <String Key="Status">Status</String>
+  <String Key="Target">Target</String>
+  <String Key="Warning">Warning</String>
+  <String Key="Warnings">warning(s)</String>
+  <String Key="ReportTitle">Code Analysis Report</String>
+ </Localized>
+</FxCopReport>

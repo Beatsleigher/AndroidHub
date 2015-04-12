@@ -1,0 +1,6 @@
+// Teal_Accent.json
+{
+	"ThemeName": "Teal",
+	"ThemeSource": "pack://application:,,,/MahApps.Metro;component/Styles/Accents/Teal.xaml",
+	"HexColourCode": "#CC00ABA9"
+}

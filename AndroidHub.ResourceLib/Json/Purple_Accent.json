@@ -1,0 +1,6 @@
+// Purple_Accent.json
+{
+	"ThemeName": "Purple",
+	"ThemeSource": "pack://application:,,,/MahApps.Metro;component/Styles/Accents/Purple.xaml",
+	"HexColourCode": "#CC6459DF"
+}

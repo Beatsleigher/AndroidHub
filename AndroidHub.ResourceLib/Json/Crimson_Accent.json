@@ -1,0 +1,6 @@
+// Crimson_Accent.json
+{
+	"ThemeName": "Crimson",
+	"ThemeSource": "pack://application:,,,/MahApps.Metro;component/Styles/Accents/Crimson.xaml",
+	"HexColourCode": "#CCA20025"
+}

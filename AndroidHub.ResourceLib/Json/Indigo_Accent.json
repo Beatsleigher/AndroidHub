@@ -1,0 +1,6 @@
+// Indigo_Accent.json
+{
+	"ThemeName": "Indigo",
+	"ThemeSource": "pack://application:,,,/MahApps.Metro;component/Styles/Accents/Indigo.xaml",
+	"HexColourCode": "#CC6A00FF"
+}

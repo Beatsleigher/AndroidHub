@@ -1,0 +1,6 @@
+// Olive_Accent.json
+{
+	"ThemeName": "Olive",
+	"ThemeSource": "pack://application:,,,/MahApps.Metro;component/Styles/Accents/Olive.xaml",
+	"HexColourCode": "#CC6D8764"
+}

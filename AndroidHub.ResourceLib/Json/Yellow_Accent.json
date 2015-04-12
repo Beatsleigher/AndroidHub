@@ -1,0 +1,6 @@
+// Yellow_Accent.json
+{
+	"ThemeName": "Yellow",
+	"ThemeSource": "pack://application:,,,/MahApps.Metro;component/Styles/Accents/Yellow.xaml",
+	"HexColourCode": "#CCFEDE06"
+}

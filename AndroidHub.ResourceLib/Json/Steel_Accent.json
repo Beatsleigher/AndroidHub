@@ -1,0 +1,6 @@
+// Steel_Accent.json
+{
+	"ThemeName": "Steel",
+	"ThemeSource": "pack://application:,,,/MahApps.Metro;component/Styles/Accents/Steel.xaml",
+	"HexColourCode": "#CC647687"
+}
