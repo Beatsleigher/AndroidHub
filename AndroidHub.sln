@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApplication", "TestAppl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AndroidHub", "AndroidHub\AndroidHub.csproj", "{82B17A91-D128-417B-BDC3-08A7468EEA26}"
 EndProject
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "AndroidHub.ExceptionViewer", "AndroidHub.ExceptionViewer\AndroidHub.ExceptionViewer.vbproj", "{48504856-33C3-4681-B064-5A160A5BC13C}"
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "AndroidHub.ExceptionViewer", "AndroidHub.ExceptionViewer\AndroidHub.ExceptionViewer.vbproj", "{ED7FA6A9-BA75-431A-A34A-E532E19D56AF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +35,10 @@ Global
 		{82B17A91-D128-417B-BDC3-08A7468EEA26}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{82B17A91-D128-417B-BDC3-08A7468EEA26}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{82B17A91-D128-417B-BDC3-08A7468EEA26}.Release|Any CPU.Build.0 = Release|Any CPU
-		{48504856-33C3-4681-B064-5A160A5BC13C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{48504856-33C3-4681-B064-5A160A5BC13C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{48504856-33C3-4681-B064-5A160A5BC13C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{48504856-33C3-4681-B064-5A160A5BC13C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED7FA6A9-BA75-431A-A34A-E532E19D56AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED7FA6A9-BA75-431A-A34A-E532E19D56AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED7FA6A9-BA75-431A-A34A-E532E19D56AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED7FA6A9-BA75-431A-A34A-E532E19D56AF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
