@@ -152,28 +152,38 @@ namespace AndroidHub.ViewModels {
         /// Loads the preferences, styles, frequently used devices, downloads the latest executables and more.
         /// </summary>
         internal async Task<bool> BootAndroidHubAsync() {
-            await App.Current.Dispatcher.BeginInvoke(new Action(() => {
-                StartupProgress = 0;
-                ReadableProgress = "Starting...";
-                var m_prefs = Preferences.Instance;
-                StartupProgress = 25;
-                ReadableProgress = "Loading preferences... ( Screen might flicker )";
-                m_prefs.LoadPreferences();
-                StartupProgress = 50;
-                ReadableProgress = "Serializing preferences...";
-                m_prefs.Serialize();
-                StartupProgress = 75;
-                ReadableProgress = "Loading user themes...";
-                ReadUserThemes();
-                StartupProgress = 85;
-                ReadableProgress = "Serializing themes...";
-                SerializeThemes();
-                StartupProgress = 95;
-                ReadableProgress = "Loading main window...";
-                new MainWindow().Show();
-                StartupProgress = 100;
+            return await Task<bool> Task.Run<bool>(new Action(() => {
+				var properties = Preferences.Instance;
+				var androidController = AndroidController.Instance;
+				
+				properties.ApplyPreferences();
+				
+				androidController.OnDeviceAdded += (s, evt) => {
+					/* To-Do: 
+						// Show notification window on bottom-right hand side of the monitor.
+						// If user is using multi-monitor setup, show notification on main monitor.
+						// Use await Task.Run<int>
+					*/
+				};
+				androidController.OnDeviceRemoved += (s, evt) => {
+					// Do same as OnDeviceAdded
+				};
+				
+				// To-Do: Create ResourceManager class, static, manage resources. Lol.
+				// ResourceManager.LoadJson();
+				// ResourceManager.LoadResources();
+				
+				mainWindow = new MainWindow();
+				
+				var updatesAvailable = UpdateManager.UpdatesAvailable();
+				
+				if (updatesAvailable) {
+					// Notify user
+				}
+				
+				mainWindow.Show();
+				
             }));
-            return true;
         }
 
         public static bool ReadUserThemes() {
