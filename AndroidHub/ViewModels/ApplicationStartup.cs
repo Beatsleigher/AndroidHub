@@ -4,7 +4,9 @@ namespace AndroidHub.ViewModels {
 
     using AndroidHub.Models;
     using MahApps.Metro;
+    using MahApps.Metro.Controls;
     using Newtonsoft.Json;
+    using RegawMOD.Android;
     using System.Collections.Generic;
     using System.ComponentModel;
     using System.Diagnostics;
@@ -25,6 +27,7 @@ namespace AndroidHub.ViewModels {
         private int m_maximum;
         private int m_minimum;
         private string m_progress;
+        private MetroWindow mainWindow;
 #endregion
 #region Static variables
         public static readonly string m_themeDirectory;
@@ -152,7 +155,7 @@ namespace AndroidHub.ViewModels {
         /// Loads the preferences, styles, frequently used devices, downloads the latest executables and more.
         /// </summary>
         internal async Task<bool> BootAndroidHubAsync() {
-            return await Task<bool> Task.Run<bool>(new Action(() => {
+            await Task.Run(new Action(() => {
 				var properties = Preferences.Instance;
 				var androidController = AndroidController.Instance;
 				
@@ -175,15 +178,15 @@ namespace AndroidHub.ViewModels {
 				
 				mainWindow = new MainWindow();
 				
-				var updatesAvailable = UpdateManager.UpdatesAvailable();
+				//var updatesAvailable = UpdateManager.UpdatesAvailable();
 				
-				if (updatesAvailable) {
+				/*if (updatesAvailable) {
 					// Notify user
-				}
+				}*/
 				
 				mainWindow.Show();
-				
             }));
+            return true;
         }
 
         public static bool ReadUserThemes() {

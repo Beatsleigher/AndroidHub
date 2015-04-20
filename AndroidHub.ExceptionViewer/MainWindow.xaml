@@ -1,8 +1,12 @@
 ﻿<Window x:Class="AndroidHub.ExceptionViewer.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="350" Width="525">
+        Title="AndroidHub | Exception Viewer" Height="350" Width="525">
     <Grid>
-        
+        <ListView HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0, 0, 0, 50" ItemsSource="{Binding Items, UpdateSourceTrigger=PropertyChanged}" />
+
+        <Button HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10, 0, 0, 10" Content="Refresh" />
+        <Button HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0, 0, 0, 10" Content="Delete" />
+        <Button HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0, 0, 10, 10" Content="Upload" />
     </Grid>
 </Window>

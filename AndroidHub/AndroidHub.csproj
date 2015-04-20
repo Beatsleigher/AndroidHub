@@ -94,9 +94,7 @@
     <Compile Include="Models\Preferences.cs" />
     <Compile Include="Models\AndroidDevice.cs" />
     <Compile Include="ViewModels\ApplicationStartup.cs" />
-    <Compile Include="Views\PreferenceView.xaml.cs">
-      <DependentUpon>PreferenceView.xaml</DependentUpon>
-    </Compile>
+    <Compile Include="Views\PreferenceView.cs" />
     <Compile Include="Views\Splash.xaml.cs">
       <DependentUpon>Splash.xaml</DependentUpon>
     </Compile>
@@ -115,10 +113,6 @@
     <Page Include="Resources\Icons.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Views\PreferenceView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Splash.xaml">
       <SubType>Designer</SubType>

@@ -28,10 +28,7 @@ namespace AndroidHub.Views {
             this.DataContext = context;
             context.StartupProgress = 0;
 
-            this.Loaded += (s, evt) => new Thread(
-                () => {
-                    Application.Current.Dispatcher.BeginInvoke(new Action(async () => { await context.BootAndroidHubAsync(); })); 
-                }).Start();
+            this.Loaded += async (s, evt) => await context.BootAndroidHubAsync();
         }
     }
 }
